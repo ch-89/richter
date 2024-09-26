@@ -1,0 +1,60 @@
+{"frames": {
+
+"idle_01.png":
+{
+	"frame": {"x":1,"y":1205,"w":120,"h":288},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":288},
+	"sourceSize": {"w":120,"h":288},
+	"anchor": {"x":0.5,"y":0}
+},
+"idle_02.png":
+{
+	"frame": {"x":1,"y":1,"w":120,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":300},
+	"sourceSize": {"w":120,"h":300},
+	"anchor": {"x":0.5,"y":0}
+},
+"idle_03.png":
+{
+	"frame": {"x":1,"y":907,"w":120,"h":296},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":296},
+	"sourceSize": {"w":120,"h":296},
+	"anchor": {"x":0.5,"y":0}
+},
+"idle_04.png":
+{
+	"frame": {"x":1,"y":303,"w":120,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":300},
+	"sourceSize": {"w":120,"h":300},
+	"anchor": {"x":0.5,"y":0}
+},
+"idle_05.png":
+{
+	"frame": {"x":1,"y":605,"w":120,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":300},
+	"sourceSize": {"w":120,"h":300},
+	"anchor": {"x":0.5,"y":0}
+}},
+"animations": {
+	"idle": ["idle_01.png","idle_02.png","idle_03.png","idle_04.png","idle_05.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.1",
+	"image": "death.png",
+	"format": "RGBA8888",
+	"size": {"w":122,"h":1494},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:05c6bcea4594df2cac442bd55db72f41:e2598700c5b22f4dbbfb16199b37767f:572aa1586ae03ed41df9ba84da44551f$"
+}
+}

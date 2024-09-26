@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.3.12/pixi.min.js" integrity="sha512-Fvs7q5wIAzPgyYNEzppTt3G3/U8FvQwr9WQJHe113FQLX5tIL8uS4m6Rq+04SXf+C3IgorXW4HQzKKVLAGWgFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module">
+        import Richter from "./Richter.js"
+        import Death from "./Death.js"
+
+        PIXI.DisplayObject.prototype.hit = function(other) {
+            // Get the bounding boxes of both objects (this and the other object)
+            const bounds1 = this.getBounds();
+            const bounds2 = other.getBounds();
+
+            // Check for collision using axis-aligned bounding box (AABB) technique
+            return bounds1.x + bounds1.width > bounds2.x &&
+                bounds1.x < bounds2.x + bounds2.width &&
+                bounds1.y + bounds1.height > bounds2.y &&
+                bounds1.y < bounds2.y + bounds2.height;
+        }
+
+        window.enemies = []
+
+        window.app = new PIXI.Application({ resizeTo: window })
+        document.body.appendChild(app.view)
+
+        app.loader
+            .add("richter", "images/richter.json")
+            .add("death", "images/death.json")
+            .add("axe", "images/axe.png")
+            .add("cross", "images/cross.png")
+            .add("scythe", "images/scythe.png")
+            .add("holywater", "images/holywater.png")
+            .add("flame", "images/flame.json")
+            .load(init)
+
+        function init() {
+            const game = new PIXI.Container
+
+            window.richter = new Richter
+            window.death = new Death
+
+            enemies.push(death)
+
+
+            game.addChild(death, richter)
+            //game.addChild(richter)
+            app.stage.addChild(game)
+
+            app.ticker.add(() => game.children.forEach(child => child.animate()))
+        }
+    </script>
+</body>
+</html>
